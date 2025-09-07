@@ -29,7 +29,7 @@ Built with **Node.js, Express.js, MongoDB**, and **Blockchain integration** to p
 
 1. **Clone the repository**
    ```
-   git clone https://github.com/your-username/rxguard.git
+   git clone https://github.com/sonivipin119/RxGuard.git
    cd rxguard
 2. Install dependencies
    ```
@@ -72,6 +72,6 @@ Built with **Node.js, Express.js, MongoDB**, and **Blockchain integration** to p
 # 👨‍💻 Author
 
 **Vipin Soni**
-Portfolio: [Link](sonivipin119.github.io/Portfolio/)
-LinkedIn: [My linkedin profile](https://linkedin.com/in/vipin-soni-416a61257/)
-GitHub: [@sonivipin119](https://github.com/sonivipin119)
+- Portfolio: [Link](https://sonivipin119.github.io/Portfolio/)
+- LinkedIn: [My linkedin profile](https://linkedin.com/in/vipin-soni-416a61257/)
+- GitHub: [@sonivipin119](https://github.com/sonivipin119)
