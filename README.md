@@ -1,4 +1,4 @@
-# 💊 RxGuard | Medical Prescription and Verification System
+# 💊 RxShield | Medical Prescription and Verification System
 
 A secure web application that streamlines **digital medical prescriptions** and ensures their authenticity.  
 Built with **Node.js, Express.js, MongoDB**, and **Blockchain integration** to provide tamper-proof, transparent, and trustworthy prescription management for doctors, patients, and pharmacists.  
