@@ -1,21 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import SignUp from './auth/signUp'
-import Login from './auth/login'
+import { BrowserRouter as Router, Route, Routes, Outlet } from "react-router-dom";
+import SignUp from "./auth/signUp";
+import Login from "./auth/login";
+import TermCondition from "./view/term_privacy/termCondition";
+import PrivacyPolicy from "./view/term_privacy/privacyPolicy";
+import Navbar from "./partials/navbar";
+import Footer from "./partials/footer";
+import Dashboard from "./components/dashboard";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+// Layout with Dashboard
+function DashboardLayout() {
   return (
     <>
-      <div className="signUp">
-        <SignUp></SignUp>
-      </div>
-        <Login></Login>
+      <Navbar />
+      <Dashboard />
+      <main className="flex-grow">
+        <Outlet /> {/* child routes here */}
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+//  Layout without Dashboard
+function SimpleLayout() {
+  return (
+    <>
+      <Navbar />
+      <main className="flex-grow">
+        <Outlet /> {/* child routes here */}
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* Routes with Dashboard */}
+        <Route path="/" element={<DashboardLayout />}>
+          {/*  */}
+        </Route>
+
+        {/* Routes without Dashboard */}
+        <Route element={<SimpleLayout />}>
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/terms" element={<TermCondition />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
